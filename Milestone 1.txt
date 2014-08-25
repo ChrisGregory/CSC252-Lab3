@@ -1,0 +1,11 @@
+Create classes called BfsGraphTraversal and DfsGraphTraversal which include a method of the following
+signature:
+
+List<List<Integer>> traverse(Graph g);  // returns all the connected components of a graph, listed in
+their order of visitation
+
+Demonstrate with a unit test (not necessary JUnit) that they correctly traverse an entire disconnected
+graph.  (You can find some nice pseudocode in the Shaffer book, chapter 11).
+
+Questions I may ask:  What is the difference between an adjacency matrix and an adjacency list with 
+respect to BFS and DFS performance? In what cases would you want to use BFS or DFS?

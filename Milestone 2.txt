@@ -1,0 +1,11 @@
+Create a class DotsAndBoxes which uses your Graph class as the underlying representation.  Add the
+following methods:
+
+int drawLine(int player, int x1, int y1, int x2, int y2); // draws a line on the Dots and Boxes 
+board, returns how many boxes were completed by drawing the line.
+
+int score(int player); // returns the number of boxes the player has completed
+
+boolean anyMovesLeft(); // returns whether the Dots and Boxes board is full.
+
+Make sure to read up on Strings and Coins in the full lab description before completing these methods.
