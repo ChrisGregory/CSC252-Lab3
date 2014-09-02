@@ -4,7 +4,13 @@ import java.util.Random;
 public class BFSDFSTester {
 	public static void main(String[] args) {
 		Random rand = new Random();
-		Graph g = new Graph(10);
+		
+		int size = 10;
+		
+		Graph g = new Graph(size);
+		
+		System.out.println("Generating a random " + size + " node graph...");
+		
 		for(int i = 0; i < g.vCount(); i++)
 		{
 			int connection1 = rand.nextInt(g.vCount());
@@ -18,6 +24,8 @@ public class BFSDFSTester {
 			if(connection3 != i)
 				g.addEdge(i, connection3, 1);
 		}
+		
+		System.out.println("Graph Built.\n");
 		
 		System.out.println("Adjacency Matrix:");
 		g.printAdjacencyMatrix();
