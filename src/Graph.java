@@ -21,20 +21,21 @@ public class Graph {
 
 	public void printAdjacencyMatrix() {
 		for (int i = 0; i < adjacencyMatrix.length; i++) {
-			System.out.print("\n");
 			for (int j = 0; j < adjacencyMatrix[i].length; j++) {
 				System.out.print(adjacencyMatrix[i][j] + " ");
 			}
+			System.out.print("\n");
 		}
 	}
 	public void printAdjacencyList() {
 		for (int i = 0; i < adjacencyMatrix.length; i++) {
-			System.out.print("\n" + i +": ");
+			System.out.print(i +": ");
 			for (int j = 0; j < adjacencyMatrix[i].length; j++) {
 				if(adjacencyMatrix[i][j] != 0){
 					System.out.print(j+", ");
 				}
 			}
+			System.out.print("\n");
 		}
 		System.out.println();
 	}

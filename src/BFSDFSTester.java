@@ -17,28 +17,30 @@ public class BFSDFSTester {
 			g.addEdge(i, connection3, 1);
 		}
 		
+		System.out.println("Adjacency Matrix:");
 		g.printAdjacencyMatrix();
 		System.out.println();
+		System.out.println("Adjacency List:");
 		g.printAdjacencyList();
 		
 		DFSGraphTraversal DFS = new DFSGraphTraversal();
 		List<List<Integer>> result = DFS.traverse(g);
-		System.out.println("DFS:");
+		System.out.println("\nDFS:");
 		for(List<Integer> list : result){
-			System.out.print("\n");
 			for(int i : list){
 				System.out.print(i+", ");
 			}
+			System.out.print("\n");
 		}
 
 		BFSGraphTraversal BFS = new BFSGraphTraversal();
 		List<List<Integer>> BFSresult = BFS.traverse(g);
-		System.out.println("BFS:");
+		System.out.println("\nBFS:");
 		for(List<Integer> list : BFSresult){
-			System.out.print("\n");
 			for(int i : list){
 				System.out.print(i+", ");
 			}
+			System.out.print("\n");
 		}
 	}
 }
