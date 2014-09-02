@@ -27,6 +27,17 @@ public class Graph {
 			}
 		}
 	}
+	public void printAdjacencyList() {
+		for (int i = 0; i < adjacencyMatrix.length; i++) {
+			System.out.print("\n" + i +": ");
+			for (int j = 0; j < adjacencyMatrix[i].length; j++) {
+				if(adjacencyMatrix[i][j] != 0){
+					System.out.print(j+", ");
+				}
+			}
+		}
+		System.out.println();
+	}
 
 	public int first(int vertex) {
 		// returns the first vertex (in natural order) connected to vertex v. If

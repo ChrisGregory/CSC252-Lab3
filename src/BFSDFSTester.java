@@ -19,6 +19,7 @@ public class BFSDFSTester {
 		
 		g.printAdjacencyMatrix();
 		System.out.println();
+		g.printAdjacencyList();
 		
 		DFSGraphTraversal DFS = new DFSGraphTraversal();
 		List<List<Integer>> result = DFS.traverse(g);
@@ -33,7 +34,7 @@ public class BFSDFSTester {
 		BFSGraphTraversal BFS = new BFSGraphTraversal();
 		List<List<Integer>> BFSresult = BFS.traverse(g);
 		System.out.println("BFS:");
-		for(List<Integer> list : result){
+		for(List<Integer> list : BFSresult){
 			System.out.print("\n");
 			for(int i : list){
 				System.out.print(i+", ");

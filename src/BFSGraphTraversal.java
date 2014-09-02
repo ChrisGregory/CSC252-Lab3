@@ -5,6 +5,10 @@ import java.util.PriorityQueue;
 public class BFSGraphTraversal {
 	// O(V+E)
 	public List<List<Integer>> traverse(Graph graph) {
+		for(int i = 0; i < graph.vCount(); i++){
+			graph.setMark(i, 0);
+		}
+		
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 		List<Integer> queue = new ArrayList<Integer>();
 		queue.add(0);
@@ -24,7 +28,6 @@ public class BFSGraphTraversal {
 			}
 			result.add(list);
 		}
-
-		return null;
+		return result;
 	}
 }
