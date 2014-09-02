@@ -8,7 +8,13 @@ public class DFSGraphTraversal {
 		for(int i = 0; i < graph.vCount(); i++){
 			graph.setMark(i, 0);
 		}
-		return DFSHelper(graph, 0);
+		List<List<Integer>> result = DFSHelper(graph, 0);
+		List<List<Integer>> reversedResult = new ArrayList<List<Integer>>();
+		while(result.size() > 0){
+			reversedResult.add(result.get(result.size()-1));
+			result.remove(result.size()-1);
+		}
+		return reversedResult;
 	}
 	public List<List<Integer>> DFSHelper(Graph graph, int currentVertex){
 		List<Integer> list = new ArrayList<Integer>();
