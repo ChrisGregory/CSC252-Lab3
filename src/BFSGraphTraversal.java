@@ -12,6 +12,7 @@ public class BFSGraphTraversal {
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 		List<Integer> queue = new ArrayList<Integer>();
 		queue.add(0);
+		graph.setMark(0, 1);
 		while (queue.size() != 0) {
 			List<Integer> list = new ArrayList<Integer>();
 			int currentNode = queue.get(0);

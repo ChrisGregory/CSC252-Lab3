@@ -8,13 +8,15 @@ public class BFSDFSTester {
 		for(int i = 0; i < g.vCount(); i++)
 		{
 			int connection1 = rand.nextInt(g.vCount());
-			g.addEdge(i, connection1, 1);
-
 			int connection2 = rand.nextInt(g.vCount());
-			g.addEdge(i, connection2, 1);
-			
 			int connection3 = rand.nextInt(g.vCount());
-			g.addEdge(i, connection3, 1);
+			
+			if(connection1 != i)
+				g.addEdge(i, connection1, 1);
+			if(connection2 != i)
+				g.addEdge(i, connection2, 1);
+			if(connection3 != i)
+				g.addEdge(i, connection3, 1);
 		}
 		
 		System.out.println("Adjacency Matrix:");
